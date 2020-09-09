@@ -21,20 +21,19 @@ class CreateProduit extends Migration
 
              $table->increments('id_produit');
 
-             $table->string('Nom_Produit');
+             $table->string('nom_produit');
 
-             $table->string('Site_Produit');
+             $table->string('site_produit');
 
-             $table->float('Prix_Produit');
+             $table->float('prix_produit');
 
-             $table->float('Référence');
+             $table->float('reference');
 
-             $table->string('Photo1_Produit')->default('default.jpg');
+             $table->string('photo1_produit')->default('default.jpg');
              
-             //foreign key indirectly 
-             $table->integer('Nom_Marque')->unsigned();
+             $table->integer('nom_marque')->unsigned();
 
-            $table->timestamps();
+             $table->timestamps();
         });
     }
 
